@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[iOS+ruby addiction]]></title>
+  <link href="http://oarrabi.github.io/atom.xml" rel="self"/>
+  <link href="http://oarrabi.github.io/"/>
+  <updated>2014-01-28T02:29:35+03:00</updated>
+  <id>http://oarrabi.github.io/</id>
+  <author>
+    <name><![CDATA[Omar Arrabi]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bbbb]]></title>
+    <link href="http://oarrabi.github.io/blog/2014/01/28/bbbb/"/>
+    <updated>2014-01-28T01:15:50+03:00</updated>
+    <id>http://oarrabi.github.io/blog/2014/01/28/bbbb</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Title]]></title>
+    <link href="http://oarrabi.github.io/blog/2014/01/28/title/"/>
+    <updated>2014-01-28T01:15:02+03:00</updated>
+    <id>http://oarrabi.github.io/blog/2014/01/28/title</id>
+    <content type="html"><![CDATA[<h1>HTTP</h1>
+
+<pre><code>require 'net/http'
+require 'uri'
+
+#Create URI
+uri = URI.parse('http://URI') 
+#Set query for the URI to dic by `URI.encode_www_form`
+uri.query = URI.encode_www_form(hash)
+</code></pre>
+
+<h2>Get</h2>
+
+<pre><code>resp = Net::HTTP.get_response(uri) =&gt; Net:HTTPOK
+resp = Net::HTTP.get(uri) =&gt; string
+</code></pre>
+
+<h2>Post</h2>
+
+<pre><code>request = Net::HTTP.post_form(URI, hash)
+post request.body
+</code></pre>
+
+<h2>Generic</h2>
+
+<ol>
+<li><p>Create <code>Net:HTTP</code> object</p>
+
+<pre><code> http = Net::HTTP.new("host")
+</code></pre></li>
+<li><p>create a get or post request</p>
+
+<pre><code> request = Net::HTTP::Get.new("url", headers)
+ request = Net::HTTP::Post.new("url", headers)
+</code></pre></li>
+<li><p>Add header, body</p>
+
+<pre><code> request.add_field("key", "val")
+ request.body = "b"
+</code></pre></li>
+<li><p>Send the request</p>
+
+<pre><code> resp = http.request(request)
+ string = resp.body
+</code></pre></li>
+</ol>
+
+
+<p>For Async use Threads</p>
+]]></content>
+  </entry>
+  
+</feed>
