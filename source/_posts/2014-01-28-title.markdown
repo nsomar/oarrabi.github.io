@@ -1,0 +1,47 @@
+---
+layout: post
+title: "title"
+date: 2014-01-28 01:15:02 +0300
+comments: true
+categories: 
+---
+#HTTP
+
+    require 'net/http'
+    require 'uri'
+
+    #Create URI
+    uri = URI.parse('http://URI') 
+    #Set query for the URI to dic by `URI.encode_www_form`
+    uri.query = URI.encode_www_form(hash)
+
+##Get
+    resp = Net::HTTP.get_response(uri) => Net:HTTPOK
+    resp = Net::HTTP.get(uri) => string
+
+##Post
+    request = Net::HTTP.post_form(URI, hash)
+    post request.body
+
+##Generic
+
+1. Create `Net:HTTP` object
+
+        http = Net::HTTP.new("host")
+
+2. create a get or post request
+
+        request = Net::HTTP::Get.new("url", headers)
+        request = Net::HTTP::Post.new("url", headers)
+
+3. Add header, body
+
+        request.add_field("key", "val")
+        request.body = "b"
+
+4. Send the request
+
+        resp = http.request(request)
+        string = resp.body
+
+For Async use Threads
