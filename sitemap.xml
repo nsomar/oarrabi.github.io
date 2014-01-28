@@ -2,22 +2,30 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://oarrabi.github.io/blog/2014/01/28/title/</loc>
-        <lastmod>2014-01-28T03:06:34+03:00</lastmod>
+        <lastmod>2014-01-28T03:14:48+03:00</lastmod>
     </url>
     <url>
         <loc>http://oarrabi.github.io/blog/2014/01/28/bbbb/</loc>
-        <lastmod>2014-01-28T01:15:50+03:00</lastmod>
+        <lastmod>2014-01-28T03:14:48+03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://oarrabi.github.io/archives/</loc>
+        <lastmod>2014-01-28T03:14:48+03:00</lastmod>
     </url>
     <url>
         <loc>http://oarrabi.github.io/blog/archives/</loc>
-        <lastmod>2014-01-28T03:06:34+03:00</lastmod>
+        <lastmod>2014-01-28T03:14:48+03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://oarrabi.github.io/blog/</loc>
+        <lastmod>2014-01-28T03:14:48+03:00</lastmod>
     </url>
     <url>
         <loc>http://oarrabi.github.io/</loc>
-        <lastmod>2014-01-28T03:06:34+03:00</lastmod>
+        <lastmod>2014-01-28T03:14:48+03:00</lastmod>
     </url>
     <url>
         <loc>http://oarrabi.github.io/robots.txt</loc>
-        <lastmod>2014-01-28T01:05:22+03:00</lastmod>
+        <lastmod>2014-01-28T03:14:48+03:00</lastmod>
     </url>
 </urlset>
