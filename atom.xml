@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[iOS+ruby addiction]]></title>
+  <title><![CDATA[ifnottrue]]></title>
   <link href="http://oarrabi.github.io/atom.xml" rel="self"/>
   <link href="http://oarrabi.github.io/"/>
-  <updated>2014-01-28T03:17:33+03:00</updated>
+  <updated>2014-01-30T00:52:32+03:00</updated>
   <id>http://oarrabi.github.io/</id>
   <author>
     <name><![CDATA[Omar Arrabi]]></name>
     
   </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
@@ -22,11 +23,80 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[title]]></title>
+    <title type="html"><![CDATA[Bla bla bla]]></title>
     <link href="http://oarrabi.github.io/blog/2014/01/28/title/"/>
     <updated>2014-01-28T01:15:02+03:00</updated>
     <id>http://oarrabi.github.io/blog/2014/01/28/title</id>
-    <content type="html"><![CDATA[<p>Updating2</p>
+    <content type="html"><![CDATA[<h1 id="http">HTTP</h1>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>require <span class="string"><span class="delimiter">'</span><span class="content">net/http</span><span class="delimiter">'</span></span>
+require <span class="string"><span class="delimiter">'</span><span class="content">uri</span><span class="delimiter">'</span></span>
+
+<span class="comment">#Create URI</span>
+uri = <span class="constant">URI</span>.parse(<span class="string"><span class="delimiter">'</span><span class="content">http://URI</span><span class="delimiter">'</span></span>) 
+<span class="comment">#Set query for the URI to dic by `URI.encode_www_form`</span>
+uri.query = <span class="constant">URI</span>.encode_www_form(hash)
+</pre></div>
+</div>
+</div>
+
+<h2 id="get">Get</h2>
+<div><div class="CodeRay">
+  <div class="code"><pre>resp = <span class="constant">Net</span>::<span class="constant">HTTP</span>.get_response(uri) =&gt; <span class="key">Net</span>:<span class="constant">HTTPOK</span>
+resp = <span class="constant">Net</span>::<span class="constant">HTTP</span>.get(uri) =&gt; string
+</pre></div>
+</div>
+</div>
+
+<!--more-->
+
+<h2 id="post">Post</h2>
+<div><div class="CodeRay">
+  <div class="code"><pre>request = <span class="constant">Net</span>::<span class="constant">HTTP</span>.post_form(<span class="constant">URI</span>, hash)
+post request.body
+</pre></div>
+</div>
+</div>
+
+<h2 id="generic">Generic</h2>
+
+<p>Create <code>Net:HTTP</code> object </p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>http = <span class="constant">Net</span>::<span class="constant">HTTP</span>.new(<span class="string"><span class="delimiter">&quot;</span><span class="content">host</span><span class="delimiter">&quot;</span></span>)
+</pre></div>
+</div>
+</div>
+
+<p>create a get or post request</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>request = <span class="constant">Net</span>::<span class="constant">HTTP</span>::<span class="constant">Get</span>.new(<span class="string"><span class="delimiter">&quot;</span><span class="content">url</span><span class="delimiter">&quot;</span></span>, headers)
+request = <span class="constant">Net</span>::<span class="constant">HTTP</span>::<span class="constant">Post</span>.new(<span class="string"><span class="delimiter">&quot;</span><span class="content">url</span><span class="delimiter">&quot;</span></span>, headers)
+</pre></div>
+</div>
+</div>
+
+<p>Add header, body</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>request.add_field(<span class="string"><span class="delimiter">&quot;</span><span class="content">key</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">val</span><span class="delimiter">&quot;</span></span>)
+request.body = <span class="string"><span class="delimiter">&quot;</span><span class="content">b</span><span class="delimiter">&quot;</span></span>
+</pre></div>
+</div>
+</div>
+
+<p>Send the request</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>resp = http.request(request)
+string = resp.body
+</pre></div>
+</div>
+</div>
+
+<p>For Async use Threads</p>
 ]]></content>
   </entry>
   
