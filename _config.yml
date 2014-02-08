@@ -3,7 +3,7 @@
 # ----------------------- #
 
 url: http://oarrabi.github.io
-title: iOS+ruby addiction
+title: ifnottrue
 subtitle: iOS, ruby and other addictions that i have
 author: Omar Arrabi
 simple_search: http://google.com/search
@@ -33,13 +33,18 @@ destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
-markdown: rdiscount
+markdown: kramdown
 rdiscount:
   extensions:
     - autolink
     - footnotes
     - smart
 pygments: false # default python pygments have been replaced by pygments.rb
+kramdown:
+  use_coderay: true
+  coderay:
+    coderay_line_numbers: nil
+    coderay_css: class
 
 paginate: 10          # Posts per page on the blog index
 pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
@@ -90,7 +95,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: oabdelhafith
+disqus_short_name: omarabdelhafith
 disqus_show_comment_count: false
 
 # Google Analytics
